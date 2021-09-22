@@ -40,7 +40,7 @@
         </tr>
         <tr>
           <td>
-            <input class="form-control form-control-lg" type="cpf" placeholder="CPF" name='cpf' required>
+            <input class="form-control form-control-lg" type="cpf" placeholder="CPF" name='cpf' required id='cpf'>
           </td>
         </tr>
         <tr>
@@ -71,5 +71,74 @@
     </table>
 
 
+
+{% block js %}
+
+<script>
+
+$("#cpf").blur(function(e){
+  e.preventDefault();
+  cpf = $(this).val()
+
+  if (validaCpf(cpf)){
+    $('.new').attr("disabled", false);
+
+  } else {
+    alertify.set('notifier','position', 'top-right');
+    alertify.error("Cpf invalido");
+    $('.new').attr("disabled", true);
+    $("#cpf").focus();
+    $("#cpf").val('')
+  }
+})
+
+function validaCpf(cpf) {
+
+	if (cpf.length !== 11 || cpf == '11111111111' || cpf == '22222222222' || cpf == '33333333333' ||
+		cpf == '44444444444' || cpf == '55555555555' || cpf == '66666666666' ||
+		cpf == '77777777777' || cpf == '88888888888' || cpf == '99999999999' ||
+		cpf == '01234567890') {
+
+		return false
+	}
+
+	resultado = 0;
+
+
+	for (x = 0, contador = 10; contador >1; x++, contador--) {
+
+		resultado += parseInt(cpf[x]) * contador;
+	}
+
+
+	digito_um = (resultado * 10) % 11
+
+
+	resultado = 0;
+
+	if (digito_um == parseInt(cpf[9])) {
+
+	for (x = 0, contador=11; contador>1; x++,contador--) {
+		resultado += parseInt(cpf[x]) * contador;
+	}
+
+	digito_dois = (resultado * 10) % 11;
+
+	if (digito_dois == cpf[10]) {
+
+		return true
+
+	} else {
+
+			return false
+		}
+	}
+
+
+}
+
+</script>
+
+{% endblock %}
 
     {% endblock %}
