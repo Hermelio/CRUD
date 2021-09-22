@@ -29,7 +29,7 @@ body {
 }
 
 .mudando:hover {
-    background: #f0ad4e;
+    background: #ffc107;
     color: white;
 
 }
@@ -40,8 +40,12 @@ body {
 }
 
 .mudando {
-    border-color: #f0ad4e;
-    color: #f0ad4e;
+    border-color: #ffc107;
+    color: #ffc107;
+    background: white; 
+}
+.new1{
+    width: 48%;
 }
 
 .topo {
@@ -56,11 +60,41 @@ body {
     border-radius: 50%;
     display: inline-block;
 }
+.status-position{
+    padding: 3%!important;
+}
+.status-nome{
+    padding: 2%!important;
+}
+.btn-warning {
+    color: white;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+.new {
+    color: white;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    width: 50%;
+}
+.espaço{
+    width:29%;
+  }
+.uol{
+    text-align: center;
+    display: block;
+    font-weight: bold;
+}
+.teste{
+    color: white;
+}
 
 h3 {
     margin-top: 3%;
 }
-
+.top-table{
+    margin-top:10%;
+}
 
 
 button {

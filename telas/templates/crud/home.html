@@ -33,6 +33,7 @@
 
 <body class="container">
     <div class="row">
+<<<<<<< HEAD
 
 
 
@@ -52,13 +53,22 @@
                 <tr>
 
                 <tr>
+=======
+        <table cellspacing="20" class="table">
+            <thead class="thead-dark">
+                <tr>
+>>>>>>> 84d85abc0eb76f238a54345da9e67669dc1c574c
                     <td>
-                        <h4>Listagem de usuario</h4>
-                        <p>Escola um Cliente para visualizar os detalhes</p>
+                        <h5>Listagem de usuário</h5>
+                        <p>Escolha um cliente para visualizar os detalhes</p>
                     </td>
+<<<<<<< HEAD
                     <td></td>
 
 
+=======
+                    <td class="espaço"></td>
+>>>>>>> 84d85abc0eb76f238a54345da9e67669dc1c574c
                     <td>
                         <button class="btn btn-warning btn-novo" data-toggle-tooltip="tooltip" title="Incluir novo item">Novo
                             Cliente</button>
@@ -70,142 +80,31 @@
         <table cellspacing="20" class="table">
 
             <tbody>
-              {% for dados in user %}
-              <tr class="row-container">
-                  <td>{{dados.nome}}
-                      <p>{{dados.email}}</p>
-                  </td>
-                  <td>{{dados.cpf}}
-                      <p>{{dados.telefone}}</p>
-                  </td>
-
-                  <td>
-                    {% if dados.status %}
-                      <div class="status"></div>
-                      <span class="">Ativo</span>
-                      {% else %}
-                      <div class="status"></div>
-                      <span class="">Inativo</span>
-                    {% endif %}
-                  </td>
-                  <td>
-                      <div class="btn-group" role="group" aria-label="Ações disponíveis">
-                          <button type="button" class="btn mudando"> EDITAR</button>
-                      </div>
-                  </td>
-              </tr>
-              {% endfor %}
-
-
-                <!-- <tr class="row-container">
-                    <td>Nome 1
-                        <p>email do usuario</p>
+                {% for dados in user %}
+                <tr class="row-container">
+                    <td class="status-nome">{{dados.nome}}
+                        <p>{{dados.email}}</p>
                     </td>
-                    <td>CPF Aqui
-                        <p>telefone</p>
+                    <td>{{dados.cpf}}
+                        <p>{{dados.telefone}}</p>
                     </td>
 
-                    <td>
+                    <td class="status-position">
+                        {% if dados.status %}
                         <div class="status"></div>
                         <span class="">Ativo</span>
+                        {% else %}
+                        <div class="status"></div>
+                        <span class="">Inativo</span>
+                        {% endif %}
                     </td>
-                    <td>
+                    <td class="status-position">
                         <div class="btn-group" role="group" aria-label="Ações disponíveis">
-                            <button type="button" class="btn mudando"> EDITAR</button>
+                            <button type="button" class="btn mudando"> Editar</button>
                         </div>
                     </td>
                 </tr>
-                <tr class="row-container">
-                    <td>Nome 2
-                        <p>email do usuario</p>
-                    </td>
-                    <td>CPF Aqui
-                        <p>telefone</p>
-                    </td>
-
-                    <td>
-                        <div class="status"></div><span class="">Ativo</span>
-                    </td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Ações disponíveis">
-                            <button type="button" class="btn mudando"> EDITAR</button>
-                        </div>
-                </tr>
-                <tr class="row-container">
-                    <td>Nome 3
-                        <p>email do usuario</p>
-                    </td>
-                    <td>CPF Aqui
-                        <p>telefone</p>
-                    </td>
-
-
-                    <td>
-                        <div class="status"></div><span class="">Ativo</span>
-                    </td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Ações disponíveis">
-                            <button type="button" class="btn mudando"> EDITAR</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="row-container">
-                    <td>Nome 4
-                        <p>email do usuario</p>
-                    </td>
-                    <td>CPF Aqui
-                        <p>telefone</p>
-                    </td>
-
-
-                    <td>
-                        <div class="status"></div><span class="">Ativo</span>
-                    </td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Ações disponíveis">
-                            <button type="button" class="btn mudando"> EDITAR</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="row-container">
-
-                    <td>Nome 5
-                        <p>email do usuario</p>
-                    </td>
-                    <td>CPF Aqui
-                        <p>telefone</p>
-                    </td>
-
-
-                    <td>
-                        <div class="status"></div><span class="">Ativo</span>
-                    </td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Ações disponíveis">
-                            <button type="button" class="btn mudando"> EDITAR</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="row-container">
-
-                    <td>Nome 6
-                        <p>email do usuario</p>
-                    </td>
-                    <td>CPF Aqui
-                        <p>telefone</p>
-                    </td>
-
-
-                    <td>
-                        <div class="status"></div><span class="">Ativo</span>
-                    </td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Ações disponíveis">
-                            <button type="button" class="btn mudando "> EDITAR</button>
-                        </div>
-                    </td>
-                </tr> -->
-
+                {% endfor %}
             </tbody>
         </table>
 
