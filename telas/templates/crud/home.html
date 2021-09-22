@@ -1,24 +1,5 @@
-{% load static %}
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
-
-</head>
+{% extends 'crud/base.html' %}
+{% block conteudo%}
 
 <body class="container">
     <div class="row">
@@ -61,7 +42,10 @@
                         <p>telefone</p>
                     </td>
 
-                    <td><span class="badge badge-pill badge-success">Ativo</span></td>
+                    <td>
+                        <div class="status"></div>
+                        <span class="">Ativo</span>
+                    </td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Ações disponíveis">
                             <button type="button" class="btn mudando"> EDITAR</button>
@@ -75,7 +59,10 @@
                     <td>CPF Aqui
                         <p>telefone</p>
                     </td>
-                    <td><span class="badge badge-pill badge-success">Ativo</span></td>
+
+                    <td>
+                        <div class="status"></div><span class="">Ativo</span>
+                    </td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Ações disponíveis">
                             <button type="button" class="btn mudando"> EDITAR</button>
@@ -89,7 +76,10 @@
                         <p>telefone</p>
                     </td>
 
-                    <td><span class="badge badge-pill badge-success">Ativo</span></td>
+
+                    <td>
+                        <div class="status"></div><span class="">Ativo</span>
+                    </td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Ações disponíveis">
                             <button type="button" class="btn mudando"> EDITAR</button>
@@ -104,7 +94,10 @@
                         <p>telefone</p>
                     </td>
 
-                    <td><span class="badge badge-pill badge-success">Ativo</span></td>
+
+                    <td>
+                        <div class="status"></div><span class="">Ativo</span>
+                    </td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Ações disponíveis">
                             <button type="button" class="btn mudando"> EDITAR</button>
@@ -120,7 +113,10 @@
                         <p>telefone</p>
                     </td>
 
-                    <td><span class="badge badge-pill badge-success">Ativo</span></td>
+
+                    <td>
+                        <div class="status"></div><span class="">Ativo</span>
+                    </td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Ações disponíveis">
                             <button type="button" class="btn mudando"> EDITAR</button>
@@ -136,7 +132,10 @@
                         <p>telefone</p>
                     </td>
 
-                    <td><span class="badge badge-pill badge-success">Ativo</span></td>
+
+                    <td>
+                        <div class="status"></div><span class="">Ativo</span>
+                    </td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Ações disponíveis">
                             <button type="button" class="btn mudando "> EDITAR</button>
@@ -153,6 +152,8 @@
 
 
 <style>
+    @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
+
     body {
 
         background: #ffffff;
@@ -201,6 +202,15 @@
         display: flex;
     }
 
+    .status {
+        width: 10px;
+        height: 10px;
+        background-color: #28a745;
+        margin-right: 5%;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
     h3 {
         margin-top: 3%;
     }
@@ -230,4 +240,12 @@
             visibility: hidden;
         }
     }
+
+
+
+
+
+    /* BOTOES */
 </style>
+
+{% endblock %}
