@@ -42,8 +42,10 @@ body {
 .mudando {
     border-color: #ffc107;
     color: #ffc107;
-    background: white;
-    
+    background: white; 
+}
+.new1{
+    width: 48%;
 }
 
 .topo {
@@ -68,6 +70,12 @@ body {
     color: white;
     background-color: #ffc107;
     border-color: #ffc107;
+}
+.new {
+    color: white;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    width: 50%;
 }
 .espaço{
     width:29%;
