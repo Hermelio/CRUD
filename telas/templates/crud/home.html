@@ -5,60 +5,33 @@
     <div class="row">
 
         <table cellspacing="20" class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <td class="topo"> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                            class="bi bi-person" viewBox="0 0 16 16">
-                            <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                        </svg>
-
-                        <h3>Painel de Clientes</h3>
-                    </td>
-                </tr>
-                <tr>
-                <tr>
-                    <td>
-                        <h4>Listagem de usuario</h4>
-                        <p>Escola um Cliente para visualizar os detalhes</p>
-                    </td>
-                    <td></td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle-tooltip="tooltip" title="Incluir novo item">Novo
-                            Cliente</button>
-                    </td>
-                </tr>
-            </thead>
-
-        </table>
-        <table cellspacing="20" class="table">
 
             <tbody>
-              {% for dados in user %}
-              <tr class="row-container">
-                  <td>{{dados.nome}}
-                      <p>{{dados.email}}</p>
-                  </td>
-                  <td>{{dados.cpf}}
-                      <p>{{dados.telefone}}</p>
-                  </td>
+                {% for dados in user %}
+                <tr class="row-container">
+                    <td class="status-nome">{{dados.nome}}
+                        <p>{{dados.email}}</p>
+                    </td>
+                    <td>{{dados.cpf}}
+                        <p>{{dados.telefone}}</p>
+                    </td>
 
-                  <td>
-                    {% if dados.status %}
-                      <div class="status"></div>
-                      <span class="">Ativo</span>
-                      {% else %}
-                      <div class="status"></div>
-                      <span class="">Inativo</span>
-                    {% endif %}
-                  </td>
-                  <td>
-                      <div class="btn-group" role="group" aria-label="Ações disponíveis">
-                          <button type="button" class="btn mudando"> EDITAR</button>
-                      </div>
-                  </td>
-              </tr>
-              {% endfor %}
+                    <td class="status-position">
+                        {% if dados.status %}
+                        <div class="status"></div>
+                        <span class="">Ativo</span>
+                        {% else %}
+                        <div class="status"></div>
+                        <span class="">Inativo</span>
+                        {% endif %}
+                    </td>
+                    <td class="status-position">
+                        <div class="btn-group" role="group" aria-label="Ações disponíveis">
+                            <button type="button" class="btn mudando"> EDITAR</button>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
 
 
                 <!-- <tr class="row-container">

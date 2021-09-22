@@ -40,8 +40,8 @@ body {
 }
 
 .mudando {
-    border-color: #f0ad4e;
-    color: #f0ad4e;
+    border-color: #ffc107;
+    color: #ffc107;
 }
 
 .topo {
@@ -55,6 +55,28 @@ body {
     margin-right: 5%;
     border-radius: 50%;
     display: inline-block;
+}
+.status-position{
+    padding: 3%!important;
+}
+.status-nome{
+    padding: 2%!important;
+}
+.btn-warning {
+    color: white;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+.espaço{
+    width:29%;
+  }
+.uol{
+    text-align: center;
+    display: block;
+    font-weight: bold;
+}
+.teste{
+    color: white;
 }
 
 h3 {
