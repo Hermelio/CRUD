@@ -34,7 +34,34 @@
         <table cellspacing="20" class="table">
 
             <tbody>
-                <tr class="row-container">
+              {% for dados in user %}
+              <tr class="row-container">
+                  <td>{{dados.nome}}
+                      <p>{{dados.email}}</p>
+                  </td>
+                  <td>{{dados.cpf}}
+                      <p>{{dados.telefone}}</p>
+                  </td>
+
+                  <td>
+                    {% if dados.status %}
+                      <div class="status"></div>
+                      <span class="">Ativo</span>
+                      {% else %}
+                      <div class="status"></div>
+                      <span class="">Inativo</span>
+                    {% endif %}
+                  </td>
+                  <td>
+                      <div class="btn-group" role="group" aria-label="Ações disponíveis">
+                          <button type="button" class="btn mudando"> EDITAR</button>
+                      </div>
+                  </td>
+              </tr>
+              {% endfor %}
+
+
+                <!-- <tr class="row-container">
                     <td>Nome 1
                         <p>email do usuario</p>
                     </td>
@@ -141,7 +168,7 @@
                             <button type="button" class="btn mudando "> EDITAR</button>
                         </div>
                     </td>
-                </tr>
+                </tr> -->
 
             </tbody>
         </table>

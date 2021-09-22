@@ -7,6 +7,8 @@ class Cliente(models.Model):
     status = models.BooleanField('Status', default=True)
     telefone = models.CharField('Telefone', max_length=15)
     email = models.EmailField('Email')
+    ata_cadastro = models.DateTimeField(auto_now_add=True)
+    modificado = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f'{self.nome} - Telefone = {self.telefone}'
