@@ -127,11 +127,8 @@ DECIMAL_SEPARATOR = ","
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-<<<<<<< HEAD
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 django_heroku.settings(locals())
-=======
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
->>>>>>> e89f97b0aa81fa30253fc5668e0986755fa484a0
