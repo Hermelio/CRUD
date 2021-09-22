@@ -29,7 +29,7 @@ body {
 }
 
 .mudando:hover {
-    background: #f0ad4e;
+    background: #ffc107;
     color: white;
 
 }
@@ -42,6 +42,8 @@ body {
 .mudando {
     border-color: #ffc107;
     color: #ffc107;
+    background: white;
+    
 }
 
 .topo {
@@ -82,7 +84,9 @@ body {
 h3 {
     margin-top: 3%;
 }
-
+.top-table{
+    margin-top:10%;
+}
 
 
 button {

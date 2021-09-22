@@ -1,54 +1,63 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
+{% extends 'crud/base.html' %}
+{% block conteudo %}
 
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Senha</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputAddress">Endereço</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Endereço 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">Cidade</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputEstado">Estado</label>
-      <select id="inputEstado" class="form-control">
-        <option selected>Escolher...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputCEP">CEP</label>
-      <input type="text" class="form-control" id="inputCEP">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Clique em mim
-      </label>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Entrar</button>
-</form>
+<body class="container">
+  <div class="row">
+    <table cellspacing="20" class="table">
+      <thead class="thead-dark">
+        <tr>
+          <td>
+            <h5>Novo usuário</h5>
+            <p>Informe os campos a seguir para criar novo usuário:</p>
+          </td>
+          <td class="espaço"></td>
+        </tr>
+      </thead>
+    </table>
+    <table cellspacing="20" class="">
+      <tbody>
+        <tr>
+          <td>
+            <input class="form-control form-control-lg" type="text" placeholder="Nome">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input class="form-control form-control-lg" type="text" placeholder="E-mail">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input class="form-control form-control-lg" type="text" placeholder="CPF">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input class="form-control form-control-lg" type="text" placeholder="Telefone">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <select class="form-control form-control-lg">
+              <option selected>Status</option>
+              <option>Ativo</option>
+              <option>Inativo</option>
+              <option>Aguardando Ativação</option>
+              <option>Desativado</option>
+            </select>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <button class="btn btn-warning" data-toggle-tooltip="tooltip" title="Incluir novo item">CRIAR</button>
+            <button class="btn mudando" data-toggle-tooltip="tooltip" title="Incluir novo item">VOLTAR</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    {% endblock %}
