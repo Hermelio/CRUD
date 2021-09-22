@@ -1,8 +1,41 @@
 {% extends 'crud/base.html' %}
 {% block conteudo%}
+<div class="container-fluid">
+<div class="col-12">
+  <div class="caixa mt-20" style='display:none;'>
+    <form>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Nome">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Cpf">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Telefone">
+        </div>
+        <div class="col">
+          <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-success mb-2 btn-salvar">Cadastrar</button>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-warning mb-2 btn-cancelar">Cancelar</button>
+        </div>
+      </div>
+    </form>
+            </div>
+
+          </div>
+          </div>
+
 
 <body class="container">
     <div class="row">
+
+
+
 
         <table cellspacing="20" class="table">
             <thead class="thead-dark">
@@ -17,14 +50,17 @@
                     </td>
                 </tr>
                 <tr>
+
                 <tr>
                     <td>
                         <h4>Listagem de usuario</h4>
                         <p>Escola um Cliente para visualizar os detalhes</p>
                     </td>
                     <td></td>
+
+
                     <td>
-                        <button class="btn btn-warning" data-toggle-tooltip="tooltip" title="Incluir novo item">Novo
+                        <button class="btn btn-warning btn-novo" data-toggle-tooltip="tooltip" title="Incluir novo item">Novo
                             Cliente</button>
                     </td>
                 </tr>

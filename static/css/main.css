@@ -68,7 +68,11 @@ button {
     bottom: 1px;
 
 }
-
+.caixa {
+    background-color: #f5f3f4;
+    padding: 28px;
+    margin-top: 9px;
+}
 table {
     border-collapse: separate;
     border-spacing: 0 10px;
